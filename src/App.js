@@ -1,26 +1,28 @@
-import React, { useState, useEffect} from 'react';
-import './App.css';
-
-import { createFFmpeg } from '@ffmpeg/ffmpeg';
-const ffmpeg = createFFmpeg({ log: true });
+import React, { useState } from 'react';
+import VideoToGifConverter from './components/videotogif';
+import Header from './components/header';
 
 function App() {
+  const [videoFile, setVideoFile] = useState(null);
+  const [ready, setReady] = useState(false);
 
-  const [ready, setReady] = useState(false)
-
-  const load = async () => {
-    await ffmpeg.load();
+  // Simulating a loading state
+  setTimeout(() => {
     setReady(true);
-  }
+  }, 2000);
 
-  useEffect(() => {
-    load();
-  }, [])
+  const handleFileUpload = (event) => {
+    const file = event.target.files[0];
+    setVideoFile(file);
+  };
 
-  return (
+  return ready ? (
     <div className="App">
-
+      <Header />
+      <VideoToGifConverter videoFile={videoFile} handleFileUpload={handleFileUpload} />
     </div>
+  ) : (
+    <p>Loading...</p>
   );
 }
 

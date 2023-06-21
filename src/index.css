@@ -12,6 +12,19 @@ code {
     monospace;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+button {
+  padding: 8px 12px;
+  background: lightgreen;
+  border: 0;
+  border-left: 1px solid greenyellow;
+  border-bottom: 5px solid greenyellow;
+  border-radius: 2px;
+  color: green;
+  cursor: pointer;
+  position: relative;
+}
+button:active {
+  border-bottom-width: 2px;
+  top: 3px
+}
+
