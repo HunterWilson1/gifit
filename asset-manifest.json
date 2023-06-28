@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gifit/static/css/main.05226bdc.css",
+    "main.js": "/gifit/static/js/main.b4c1d038.js",
+    "index.html": "/gifit/index.html",
+    "main.05226bdc.css.map": "/gifit/static/css/main.05226bdc.css.map",
+    "main.b4c1d038.js.map": "/gifit/static/js/main.b4c1d038.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05226bdc.css",
+    "static/js/main.b4c1d038.js"
+  ]
+}
